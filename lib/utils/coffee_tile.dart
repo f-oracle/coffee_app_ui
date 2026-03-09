@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors_in_immutables
+
 import 'package:flutter/material.dart';
 
 class CoffeeTile extends StatelessWidget {
@@ -5,7 +7,7 @@ class CoffeeTile extends StatelessWidget {
   final String coffeeName;
   final String coffeePrice;
 
-  CoffeeTile({
+  CoffeeTile({super.key, 
     required this.coffeeImagePath,
    required this.coffeeName,
    required this.coffeePrice,
@@ -56,7 +58,7 @@ class CoffeeTile extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('\$' + coffeePrice),
+                  Text('\$$coffeePrice'),
                   Container(
                     padding: EdgeInsets.all(4),
                     decoration: BoxDecoration(
